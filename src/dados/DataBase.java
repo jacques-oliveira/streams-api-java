@@ -20,4 +20,9 @@ public abstract class DataBase {
         alunos.stream().forEach(aluno -> System.out.println(aluno));
     }
 
+    public static void imprimirPorCurso(String curso){
+        alunos.stream()
+                .filter(aluno -> aluno.getCurso().equals( curso))
+                .forEach(aluno -> System.out.println(aluno));
+    }
 }

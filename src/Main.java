@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Java Streams! Api");
         List<Aluno> alunos = DataBase.alunos;
         DataBase.imprimirAlunos();
-
-        
+        System.out.println("Alunos por curso");
+        DataBase.imprimirPorCurso("Engenharia");
     }
 }
