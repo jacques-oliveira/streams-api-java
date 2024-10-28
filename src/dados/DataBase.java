@@ -1,6 +1,7 @@
 package dados;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public abstract class DataBase {
@@ -27,9 +28,14 @@ public abstract class DataBase {
     }
 
     public static void ordemPorIdade(){
-        alunos.sort(new IdadeComparator());
-        for(Aluno a : alunos){
-            System.out.println(a);
-        }
+//        alunos.sort(new IdadeComparator());
+//        Collections.sort(alunos,new IdadeComparator());
+//        for(Aluno a : alunos){
+//            System.out.println(a);
+//        }
+        alunos.stream()
+                .sorted(new IdadeComparator())
+                .forEach(aluno -> System.out.println(aluno));
+
     }
 }
