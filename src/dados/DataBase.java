@@ -25,4 +25,11 @@ public abstract class DataBase {
                 .filter(aluno -> aluno.getCurso().equals( curso))
                 .forEach(aluno -> System.out.println(aluno));
     }
+
+    public static void ordemPorIdade(){
+        alunos.sort(new IdadeComparator());
+        for(Aluno a : alunos){
+            System.out.println(a);
+        }
+    }
 }

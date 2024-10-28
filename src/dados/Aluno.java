@@ -1,5 +1,7 @@
 package dados;
 
+import java.util.Comparator;
+
 public class Aluno {
     private String nome;
     private String curso;
@@ -66,5 +68,13 @@ public class Aluno {
                 ", sexo='" + sexo + '\'' +
                 ", aprovado=" + aprovado +
                 '}';
+    }
+
+}
+class IdadeComparator implements Comparator<Aluno>{
+
+    @Override
+    public int compare(Aluno o1, Aluno o2) {
+        return Integer.compare(o1.getIdade(), o2.getIdade());
     }
 }
