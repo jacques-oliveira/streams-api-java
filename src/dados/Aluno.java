@@ -8,7 +8,7 @@ public class Aluno {
     private boolean aprovado;
 
     public Aluno(){}
-    
+
     public Aluno(String nome, String curso, int idade, String sexo, boolean aprovado) {
         this.nome = nome;
         this.curso = curso;
@@ -55,5 +55,16 @@ public class Aluno {
 
     public void setAprovado(boolean aprovado) {
         this.aprovado = aprovado;
+    }
+
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "nome='" + nome + '\'' +
+                ", curso='" + curso + '\'' +
+                ", idade=" + idade +
+                ", sexo='" + sexo + '\'' +
+                ", aprovado=" + aprovado +
+                '}';
     }
 }
