@@ -1,6 +1,7 @@
 package dados;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Aluno {
     private String nome;
@@ -70,6 +71,18 @@ public class Aluno {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        return idade == aluno.idade && aprovado == aluno.aprovado && Objects.equals(nome, aluno.nome) && Objects.equals(curso, aluno.curso) && Objects.equals(sexo, aluno.sexo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, curso, idade, sexo, aprovado);
+    }
 }
 class IdadeComparator implements Comparator<Aluno>{
 
