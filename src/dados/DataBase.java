@@ -12,9 +12,14 @@ public abstract class DataBase {
 
         alunos.add(new Aluno("Hugo","Engenharia",25,"m",true));
         alunos.add(new Aluno("Maria","Medicina",27,"f",true));
-        alunos.add(new Aluno("Tiago","Computação",22,"m",false));
-        alunos.add(new Aluno("Marcos","Engenharia",25,"m",false));
+        alunos.add(new Aluno("Jonas","Computação",22,"m",false));
+        alunos.add(new Aluno("Marcos","Engenharia",18,"m",false));
         alunos.add(new Aluno("Sara","Medicina",20,"f",true));
+        alunos.add(new Aluno("Hugo","Engenharia",25,"m",true));
+        alunos.add(new Aluno("Igor","Medicina",27,"m",false));
+        alunos.add(new Aluno("Tiago","Computação",19,"m",false));
+        alunos.add(new Aluno("Bruno","Engenharia",35,"m",false));
+        alunos.add(new Aluno("Sara","Medicina",31,"f",true));
     }
 
     public static void imprimirAlunos(){
